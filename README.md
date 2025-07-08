@@ -18,11 +18,11 @@ The system enhances music learning, analysis, and transcription by enabling fast
 
 ## 2. Dataset and Signal Parameters
 
-- **Audio Duration**: ~60 seconds per sample
-- **Sampling Rate**: 48,000 Hz
-- **Amplitude Range**: +0.26312 to -0.24771
-- **Frequency Range**: 15 Hz to 8000 Hz
-- **Source**: Custom recordings + publicly available datasets (e.g., MAESTRO, YouTube)
+- **Audio Duration**: ~60 seconds per sample  
+- **Sampling Rate**: 48,000 Hz  
+- **Amplitude Range**: +0.26312 to -0.24771  
+- **Frequency Range**: 15 Hz to 8000 Hz  
+- **Source**: Custom recordings + publicly available datasets (e.g., MAESTRO, YouTube)  
 - **Dataset Link**: [Google Drive](https://drive.google.com/drive/folders/1NktWTptHznOxpNwXWqVoufSPfa8u4luF?usp=drive_link)
 
 ---
@@ -43,6 +43,10 @@ The system enhances music learning, analysis, and transcription by enabling fast
 - Spectrogram visualization
 - Computation time: ~0.048 seconds (2.9M samples)
 
+**STFT Output**:
+
+![Short-Time Fourier Transform](stft.png)
+
 ---
 
 ## 4. Filter Design and Noise Reduction
@@ -59,6 +63,10 @@ The system includes a digital bandpass filter to isolate piano note frequencies 
 - IIR Butterworth (N=39)
 - FIR (Hamming, Hanning, Rectangular)
 - IIR Chebyshev
+
+**Frequency Response of Low-Pass Filter**:
+
+![Frequency Response](filter_response.png)
 
 Filtering enhances clarity by suppressing irrelevant frequencies and focusing on the musical range of a piano.
 
@@ -87,10 +95,19 @@ Filtering enhances clarity by suppressing irrelevant frequencies and focusing on
 - **STFT Output**: Captures frequency variations over time
 - **Filtering Impact**: Clear separation between musical content and noise
 
-### Example Output
+### 6.1 Output Graph: Time vs Frequency
+
+![Time vs Frequency](time_vs_freq.png)
+
+### 6.2 Detected Notes Table
+
+![Detected Notes](detected_notes.png)
+
+Example Output (raw values):
 - Note Detected: C4  
 - Frequency: 261.63 Hz  
 - Time: 12.3 s  
 - Octave: 4
 
-Visual plots and spectrograms illustrate the accuracy and clarity of the extracted notes.
+---
+
